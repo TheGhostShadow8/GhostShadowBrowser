@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/wallpaperView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/night_sky" />
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/addressBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="Search or type URL"
+            android:paddingLeft="12dp"
+            android:inputType="textUri"
+            android:imeOptions="actionGo" />
+
+        <ImageButton
+            android:id="@+id/btnIncognito"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="Incognito Mode" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btnChangeBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="+ Background Wallpaper"
+        android:backgroundTint="#CC000000"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
